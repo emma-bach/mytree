@@ -1,0 +1,818 @@
+\documentclass[tikz, border=5pt]{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.multipart}
+\usetikzlibrary{graphdrawing}
+\usetikzlibrary{graphs}
+\usegdlibrary{trees}
+\usegdlibrary{phylogenetics}
+\begin{document}
+
+\newcommand{\nodeimage}[1]{%
+	\raisebox{-0.4\height}{%
+		\includegraphics[height=10mm]{#1}%
+	}%
+}
+\newcommand{\tit}{\textit}
+\begin{tikzpicture}
+	\graph[
+		tree layout,
+		grow=right,
+		level distance=50mm,
+		edges={
+			to path={
+				(\tikztostart) -- ++(25mm,0) |- (\tikztotarget)
+				\tikztonodes
+			}
+		},
+		nodes={align=center}
+	] 
+	{
+		Animalia[
+			as={Animals\\ 
+			(\tit{Animalia})
+		}],
+		Ctenophora[
+			as={Comb Jellies\\ 
+			(\tit{Ctenophora})
+		}],
+		Porifera[
+		as={Sponges\\ 
+			(\tit{Porifera})
+		}],
+		Animalia -> {
+			Ctenophora, 
+			Parahoxozoa,
+			Porifera
+		},
+	
+		% Parahoxozoa
+		Parahoxozoa -> {
+			Bilateria, 
+			Cnidaria, 
+			Placozoa
+		},
+		% Bilateria
+		
+		Bilateria -> {
+			Neprozoa,
+			Xenacoelomorpha
+		},
+	
+		% Neprozoa
+		
+		Neprozoa -> {
+			Deuterostomia,
+			Protostomia
+		},
+	
+		% Deuterostomia
+		Deuterostomia -> {
+			Chordata[
+				as={Chordates\\(\tit{Chordata})}
+			],
+			Ambulacraria
+		},
+	
+		% Chordata
+		Chordata -> {
+			Cephalochordata[
+				as={Lancelets\\(\tit{Cephalochordata})}
+			],
+			Olfactores
+		},
+	
+		% Olfactores
+		Olfactores -> {
+			Tunicata[
+				as={Tunicates\\(\tit{Tunicata})}
+			],
+			Vertebrata[
+				as={Vertebrates\\(\tit{Vertebrata})}
+			],
+		},
+	
+		% Vertebrata
+		Vertebrata -> {
+			Cyclostomata[
+				as={Jawless Fish\\(\tit{Cyclostomata})}
+			],
+			Gnathostomata[
+				as={Jawed Vertebrates\\(\tit{Gnathostomata})}
+			]
+		},
+	
+		% Gnathostomata
+		Gnathostomata -> {
+			Chondrichthyes[
+				as={Cartilaginuous Fish\\(\tit{Chondrichthyes})}
+				],
+			Osteichthyes[
+				as={Bony Fish\\(\tit{Osteichthyes})}
+				],
+		},
+	
+		% Chondrichthyes
+		Chondrichthyes -> {
+			Elasmobranchii,
+			Holocephali
+		},
+	
+		% Elasmobranchii
+		Elasmobranchii -> {
+			Selachii[
+				as={Sharks\\(\tit{Selachii})}
+				],
+			Batomorphi[
+				as={Rays\\(\tit{Batomorphi})}
+				]
+		},
+	
+		% Osteichthyes
+		Osteichthyes -> {
+			Actinopterygii[
+				as={Ray-finned fish\\(\tit{Actinopterygii})}
+				],
+			Sarcopterygii[
+				as={Lobe-finned fish\\(\tit{Sarcopterygii})}
+				],
+		},
+	
+		% Sarcopterygii
+		Sarcopterygii -> {
+			Actinistia[
+				as={Coelacanths\\(\tit{Actinistia})}
+				],
+			Rhipidistia
+		},
+	
+		% Rhipidistia
+		Rhipidistia -> {
+			Dipnoi[
+				as={Lungfishes\\(\tit{Dipnoi})}
+				],
+			Tetrapoda[
+				as={Tetrapods\\(\tit{Tetrapoda})}
+				]
+		},
+	
+		% Tetrapoda
+		Tetrapoda -> {
+			Amphibia[
+				as={Amphibians\\(\tit{Amphibia})}
+				],
+			Amniota[
+				as={Amniotes\\(\tit{Amniota})}
+				],
+		},
+	
+		% Amniota
+		Amniota -> {
+			Synapsida,
+			Sauropsida[
+				as={Reptiles and Birds\\(\tit{Sauropsida})}
+				],
+		},
+	
+		% Synapsida
+		Synapsida -> {
+			Mammalia[
+				as={Mammals\\(\tit{Mammalia})}
+				]
+		},
+	
+		% Mammalia
+		Mammalia -> {
+			Monotremata[
+				as={Egg-Laying Mammals\\(\tit{Monotremata})}
+				],
+			Theria	
+		},
+	
+		% Theria
+		Theria -> {
+			Marsupialia[
+				as={Marsupials\\(\tit{Marsupialia})}
+				],
+			Placentalia[
+				as={Placental Mammals\\(\tit{Placentalia})}
+				]
+		},
+	
+		% Placentalia
+		Placentalia -> {
+			Afrotheria,
+			Boreoeutheria,
+			Xenarthra
+		},
+	
+		% Xenarthra
+		Xenarthra -> {
+			Cingulata[
+				as={Armadillos\\(\tit{Cingulata})}
+				],
+			Pilosa
+		},
+	
+		% Pilosa
+		Pilosa -> {
+			Folivora[
+				as={Sloths\\(\tit{Folivora})}
+				],
+			Vermilingua[
+				as={Anteaters\\(\tit{Vermilingua})}
+				]
+		},
+	
+		% Afrotheria
+		Afrotheria -> {
+			Paenungulata,
+			Afroinsectiphilia
+		},
+	
+		% Afroinsectiphilia
+		Afroinsectiphilia -> {
+			Tubulidentata[
+				as={Aardvarks\\(\tit{Tubulidentata})}
+				],
+			Afroinsectivora
+		},
+		
+		% Afroinsectivora
+		Afroinsectivora -> {
+			Macroscelidea[
+				as={Sengis\\(\tit{Macroscelidea})}
+				],
+			Afrosoricida 
+		},
+	
+		% Afrosoricida 
+		Afrosoricida -> {
+			Chrysochloridae[
+				as={Golden Moles\\(\tit{Chrysochloridae})}
+				],
+			Tenrecomorpha
+		},
+	
+		% Tenrecomorpha
+		Tenrecomorpha -> {
+			Potamogalidae[
+				as={Otter Shrews\\(\tit{Potamogalidae})}
+				],
+			Tenrecidae[
+				as={Tenrecs\\(\tit{Tenrecidae})}
+				]
+		},
+	
+		% Paenungulata
+		Paenungulata -> {
+			Hyracoidae[
+				as={Hyraxes\\(\tit{Hyracoidae})}
+				],
+			Tethytheria
+		},
+	
+		% Tethytheria
+		Tethytheria -> {
+			Sirenia[
+				as={Dugongs and Manatees\\(\tit{Sirenia})}
+				],
+			Proposcidea[
+				as={Elephants\\(\tit{Proposcidea})}
+				],
+		},
+	
+		% Boreoeutheria
+		Boreoeutheria -> {
+			Euarchontoglires,
+			Laurasiatheria
+		},
+	
+		% Laurasiatheria
+		Laurasiatheria -> {
+			Chiroptera[
+				as={Bats\\(\tit{Chiroptera})}
+				],
+			Eulipotyphla[
+				as={True Insectivores\\(\tit{Eulipotyphla})}
+				],
+			Euungulata[
+				as={True Hooved Mammals\\(\tit{Euungulata})}
+				],
+			Ferae
+		},
+	
+		% Ferae
+		Ferae -> {
+			Pholidota[
+				as={Pangolins\\(\tit{Pholidota})}
+				],
+			Carnivora
+		},
+	
+		% Carnivora
+		Carnivora -> {
+			Feliformia[
+				as={Cat-Like 	Mammals\\(\tit{Feliformia})}
+				],
+			Caniformia[
+				as={Dog-Like 	Mammals\\(\tit{Caniformia})}
+				],
+		},
+	
+		% Feliformia
+		Feliformia -> {
+			Viverroidea,
+			Feloidea
+		},
+	
+		% Feloidea
+		Feloidea -> {
+			Prionodontidae[
+				as={Asiatic Linsangs\\(\tit{Prionodontidae})}
+				],
+			Felidae[
+				as={Cats\\(\tit{Felidae})}
+				]
+		},
+	
+		% Viverroidea
+		Viverroidea -> {
+			Viverridae[
+				as={Viverrids\\(\tit{Viverroidea})}
+			],
+			Herpestoidea
+		},
+		
+		Herpestoidea -> {
+			Hyaenidae[
+				as={Hyenas\\(\tit{Hyaenidae})}
+				],
+			Herpestidae[
+				as={True Mongooses\\(\tit{Herpestidae})}
+				],
+			Eupleridae
+		},
+	
+		Eupleridae -> {
+			Fossas,
+			Falanoucs,
+			Vontsiras
+		},
+	
+		% Caniformia
+		Caniformia -> {
+			Canidae,
+			Arctoidea
+		},
+	
+		% Canidae
+		Canidae -> {
+			Canini[
+				as={Dogs, Wolves,\\
+				Jackals, Coyotes,\\
+				South American Foxes\\
+				(\tit{Canini})}
+				],
+			Vulpini,
+			Urocyon
+		},
+	
+		%Vulpini
+		Vulpini -> {
+			Otocyon[
+				as={Bat-Eared Fox\\(\tit{Otocyon megalotis})}
+				],
+			Vulpes[
+				as={True Foxes\\(\tit{Vulpes})}
+				],
+			Nyctereutes[
+				as={Raccoon Dogs\\(\tit{Nyctereutes})}
+				]
+		},
+	
+		% Urocyon
+		Urocyon -> {
+			Urocyon littoralis[
+				as={Island Fox\\(\tit{Urocyon littoralis})}
+				],
+			Urocyon cinereoargenteus[
+				as={Gray Fox\\(\tit{Urocyon cinereoargenteus})}
+				],
+		},
+	
+		% Arctoidea
+		Arctoidea -> {
+			Ursidae[
+				as={Bears\\(\tit{Ursidae})}
+				],
+			Pinnipedia,
+			Musteloidea
+		},
+	
+		% Musteloidea
+		Musteloidea -> {
+			Mephitidae[
+				as={Skunks\\(\tit{Mephitidae})}
+				],
+			Ailuridae[
+				as={Red Pandas\\(\tit{Ailuridae})}
+				],
+			Procyonidae,
+			Mustelidae[
+				as={Mustelids\\(\tit{Mustelidae})}
+				],
+		},
+		
+		% Mustelidae
+		Mustelidae -> {
+			Lutrinae[
+				as={Otters\\(\tit{Lutrinae})}
+				],
+			Mustelinae[
+				as={Ferrets, Weasels,\\ Polecats, Stoats/Ermines,\\ Minks and Grisons\\(\tit{Mustelinae, Ictonychinae})}
+				],
+			Helictindinae[
+				as={Ferret-Badgers\\(\tit{Helictindinae})}
+				],
+			Guloinae,
+			Melinae[
+				as={Eurasian Badgers\\(\tit{Melinae})}
+				],
+			Mellivorinae[
+				as={Honey Badger\\(\tit{Mellivorinae})}
+				],
+			Taxidiinae[
+				as={American Badger\\(\tit{Taxidiinae})}
+				],
+		},
+	
+		% Guloinae
+		Guloinae -> {
+			Eira[
+				as={Tayra\\(\tit{Eira})}
+				],
+			Gulo[
+				as={Wolverine\\(\tit{Gulo})}
+				],
+			Martes[
+				as={Martens\\(\tit{Martes})}
+				],
+			Pekania[
+				as={Fisher\\(\tit{Pekania})}
+				],
+		},
+	
+		% Ictonychinae
+		%Ictonychinae -> {
+		%	Galictis[
+		%		as={Grisons\\(\tit{Galictis})}
+		%		],
+		%	Ictonyx[
+		%		as={Striped Polecat\\(\tit{Ictonyx})}
+		%		],
+		%	Lyncodon[
+		%		as={Patagonian Weasel\\(\tit{Lyncodon})}
+		%		],
+		%	Poecilictis[
+		%		as={Saharan Striped Polecat\\(\tit{Poecilictis})}
+		%		],
+		%	Poecilogale[
+		%		as={African Striped Weasel\\(\tit{Poecilogale})}
+		%		],
+		%	Vormela[
+		%		as={Marbled Polecat\\(\tit{Vormela})}
+		%		],
+		%},
+	
+		% Procyonidae
+		Procyonidae -> {
+			Potos[
+				as={Kinkajous\\(\tit{Potos})}
+				],
+			Procyon[
+				as={Raccoons\\(\tit{Procyon})}
+				],
+			Bassariscus,
+			Bassaricyon[
+				as={Olingos\\(\tit{Bassaricyon})}
+				],
+			Nasuina[
+				as={Coatis\\(\tit{Nasuina})}
+				]
+		},
+	
+		% Bassariscus
+		Bassariscus -> {
+			Bassariscus sumichrasti[
+				as={Cacomistles\\(\tit{Bassariscus sumichrasti})}
+				],
+			Bassariscus astutus[
+				as={Ringtails\\(\tit{Bassariscus astutus})}
+				]
+		},
+		
+		% Pinnipedia
+		Pinnipedia -> {
+			Phocidae[
+				as={True Seals\\(\tit{Phocidae})}
+				],
+			Otarioidea
+		},
+	
+		% Otarioidea
+		Otarioidea -> {
+			Odobenidae[
+				as={Walruses\\(\tit{Odobenidae})}
+				],
+			Otariidae[
+				as={Fur Seals and Sea Lions\\(\tit{Otariidae})}
+				],
+		},
+	
+		% Euungulata
+		Euungulata -> {
+			Perissodactyla[
+				as={Odd-Toed Ungulates\\(\tit{Perissodactyla})}
+				],
+			Artiodactyla[
+				as={Even-Toed Ungulates\\(\tit{Artiodactyla})}
+				],
+		},
+	
+		% Eulipotyphla
+		Eulipotyphla -> {
+			Solenodontidae[
+				as={Solenodons\\(\tit{Solenodontidae})}
+				],
+			Talpidae[
+				as={Moles\\(\tit{Talpidae})}
+				],
+			Soricidae[
+				as={True Shrews\\(\tit{Soricidae})}
+				],
+			Erinaceidae
+		},
+	
+		% Erinaceidae
+		Erinaceidae -> {
+			Erinaceinae[
+				as={Hedgehogs\\(\tit{Erinaceinae})}
+				],
+			Galericinae[
+				as={Moon Rats\\(\tit{Galericinae})}
+				]
+		},
+	
+		% Euarchontoglires
+		Euarchontoglires -> {
+			Glires,
+			Euarchonta
+		},
+	
+		% Glires
+		Glires -> {
+			Rodentia[
+				as={Rodents\\(\tit{Rodentia})}
+				],
+			Lagomorpha[
+				as={Rabbits, Hares and Pikas\\(\tit{Lagomorpha})}
+				],
+		},
+	
+		% Euarchonta
+		Euarchonta -> {
+			Scandentia[
+				as={Treeshrews\\(\tit{Scandentia})}
+				],
+			Primatomorpha
+		},
+	
+		% Primatomorpha
+		Primatomorpha -> {
+			Dermoptera[
+				as={Flying Lemurs\\(\tit{Colugo})}
+				],
+			Primates
+		},
+	
+		% Ambulacraria
+		Ambulacraria -> {
+			Hemichordata,
+			Echinodermata
+		},	
+	
+		% Hemichordata
+		Hemichordata -> {
+			Planctosphaeroidea,
+			Enteropneusta[
+				as={Acorn Worms\\(\tit{Enteropneusta})}
+			],
+			Pterobranchia[
+				as={Pterobranchs\\(\tit{Pterobranchia})}
+			]
+		},
+	
+		% Pterobranchia
+		Pterobranchia -> {
+			Cephalodiscida,
+			Graptolithina[
+				as={Graptolites\\(\tit{Graptolithina})}]
+		},
+		
+		% Echinodermata
+		Echinodermata -> {
+			Crinoidea[
+				as={Sea Lilies and Feather Stars\\(\tit{Crinoidea})}
+			],
+			Eleutherozoa
+		},
+	
+		% Eleutherozoa
+		Eleutherozoa -> {
+			Echinozoa,
+			Asterozoa
+		},
+	
+		% Echinozoa
+		Echinozoa -> {
+			Holothuroidea[
+				as={Sea Cucumbers\\(\tit{Holothuroidea})}
+				],
+			Echinoidea[
+				as={Sea Urchins\\(\tit{Echinoidea})}
+				],
+		},
+	
+		% Asterozoa
+		Asterozoa -> {
+			Ophiuroidea[
+				as={Brittle and Basket 	Stars\\(\tit{Ophiuroidea})}
+				],
+			Asteroidea[
+				as={Sea Stars\\(\tit{Asteroidea})}
+				],
+		},
+
+		% Protostomia
+		Protostomia -> {
+			Ecdysozoa,
+			Spiralia
+		},
+	
+		% Ecdysozoa
+		Ecdysozoa -> {
+			Panarthropoda,
+			Nematoida,
+			Kinorhyncha[
+				as={Mud Dragons\\(\tit{Kinorhyncha})}
+				],
+			Priapulida[
+				as={Priapulid Worms\\(\tit{Priapulida})}
+				],
+			Loricifera[
+				as={Corset Animals\\(\tit{Loricifera})}
+				],
+		},
+	
+		% Nematoida
+		Nematoida -> {
+			Nematoda[
+				as={Roundworms\\(\tit{Nematoda})}
+				],
+			Nematomorpha[
+				as={Horsehair Worms\\(\tit{Nematomorpha})}
+				],
+		},
+		
+		% Panarthropoda
+		Panarthropoda -> {
+			Arthropoda[
+				as={Arthropods\\(\tit{Arthropoda})}
+				],
+			Onchyophora[
+				as={Velvet Worms\\(\tit{Onchyophora})}
+				],
+			Tardigrada[
+				as={Tardigrades\\(\tit{Tardigrada})}
+				],
+		},
+	
+		% Spiralia
+		Spiralia -> {
+			Chaetognatha[
+				as={Arrow Worms\\(\tit{Chaetognatha})}
+				],
+			Gnathifera,
+			Cycliophora[
+				as={Wheel Bearers\\(\tit{Cycliophora})}
+				],
+			Platyhelimnthes[
+				as={Flatworms\\(\tit{Platyhelminthes})}
+				],
+			Entoprocta[
+				as={Goblet Worms\\(\tit{Entoprocta})}
+				],
+			Gastrotricha[
+				as={Hairybellies\\(\tit{Gastrotricha})}
+				],
+			Mesozoa,
+			Lophotrochozoa
+		},
+	
+		% Lophotrochozoa
+		Lophotrochozoa -> {
+			Annelida[
+				as={Segmented Worms\\(\tit{Annelida})}
+				],
+			Mollusca[
+				as={Molluscs\\(\tit{Mollusca})}
+				],
+			Lophophorata,
+			Nemertea[
+				as={Ribbon Worms\\(\tit{Nemertea})}
+				]
+		},
+		
+		% Mollusca
+		Mollusca -> {
+			Bivalvia[
+				as={Bivalves\\(\tit{Bivalvia})}
+				],
+			Scaphopoda[
+				as={Tusk Shells\\(\tit{Scaphopoda})}
+			],
+			Cephalopoda[
+				as={Cephalopods\\(\tit{Cephalopoda})}
+			],
+			Gastropoda[
+				as={Gastropods\\(\tit{Gastropoda})}
+			],
+			Monoplacophora,
+			Polyplacophora[
+				as={Chitons\\(\tit{Polyplacophora})}
+			],
+			Caudofoveata,
+			Solenogastres
+		},
+		% Gnathifera
+		Gnathifera -> {
+			Rotifera[
+				as={Rotifers\\(\tit{Rotifera})}
+			],
+			Micrognathozoa,
+			Gnathostomulida[
+				as={Jaw Worms\\(\tit{Gnathostomulida})}
+			]
+		},
+		
+		% Cnidaria
+		Cnidaria -> {
+			Anthozoa[
+				as={Corals and Sea Anemone\\ 
+					(\tit{Anthozoa})}
+				],
+			Medusozoa,
+			Endocnidozoa[
+				as={Parasitic Cnidarians\\
+					(\tit{Endocnidozoa})
+				}],
+		},
+		
+		% Medusozoa
+		Medusozoa -> {
+			Cubozoa[
+				as={Box Jellyfish\\(\tit{Cubozoa})}
+				],
+			Hydrozoa[
+				as={Hydroids\\(\tit{Hydrozoa})}
+				],
+			Scyphozoa[
+				as={True Jellyfish\\(\tit{Scyphozoa})}
+				],
+			Staurozoa[
+				as={Stalked Jellyfish\\(\tit{Staurozoa})}
+				]
+		},
+		
+		% Porifera
+		Porifera -> {
+			Calcarea, 
+			Demospongiae[
+			as={Common Sponges\\ (\tit{Demospongiae})
+			}],
+			Hexactinellida[
+			as={Glass Sponges\\ (\tit{Hexactinellida})
+			}],
+			Homoscleromorpha
+		},
+
+		Ctenophora -> {
+			Tentaculata,
+			Nuda
+		}
+	};
+
+\end{tikzpicture}
+\end{document}
