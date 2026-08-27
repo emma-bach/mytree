@@ -56,13 +56,16 @@
 		% Bilateria
 		
 		Bilateria -> {
-			Neprozoa,
+			Nephrozoa[
+			as={Animals with a specialized\\ excretory system\\ 
+				(\tit{Nephrozoa})
+			}],
 			Xenacoelomorpha
 		},
 	
-		% Neprozoa
+		% Nephrozoa
 		
-		Neprozoa -> {
+		Nephrozoa -> {
 			Deuterostomia,
 			Protostomia
 		},
@@ -699,6 +702,543 @@
 				],
 		},
 	
+		% Arthropoda
+		Arthropoda -> {
+			Chelicerata,
+			Mandibulata
+		},
+	
+		% Mandibulata
+		Mandibulata -> {
+			Myriapoda[
+			as={Myriapods\\(\tit{Myriapoda})}
+			],
+			Pancrustacea
+		},
+	
+		% Myriapoda
+		Myriapoda -> {
+			Chilopoda[
+			as={Centipedes\\(\tit{Chilopoda})}
+			],
+			Diplopoda[
+			as={Millipedes\\(\tit{Diplopoda})}
+			],
+			Pauropoda[
+			as={Smolbeanipedes\\(\tit{Pauropoda})}
+			],
+			Symphyla[
+			as={Pseudocentipedes\\(\tit{Symphyla})}
+			]
+		},
+	
+		% Pancrustacea
+		Pancrustacea -> {
+			Altocrustacea,
+			Oligostraca
+		};
+	
+		% Altocrustacea
+		Altocrustacea -> {
+			Multicrustacea,
+			Allotriocarida
+		},
+	
+		% Multicrustacea
+		Multicrustacea -> {
+			Copepoda[
+			as={Oarfeet\\(\tit{Copepoda})}
+			],
+			Malacostraca,
+			Thecostraca,
+			Tantulocarida
+		},
+	
+		% Malacostraca
+		Malacostraca -> {
+			Phyllocarida,
+			Peracarida,
+			Eumalacostraca
+		},
+	
+		% Eumalacostraca
+		Eumalacostraca -> {
+			Hoplocarida[
+			as={Mantis Shrimp\\(\tit{Hoplocarida})}
+			],
+			Syncarida,
+			Eucarida
+		},
+	
+		% Eucarida
+		Eucarida -> {
+			Euphausiacea[
+			as={Krill\\(\tit{Euphausiacea})}
+			],
+			Decapoda[
+			as={Decapods\\(\tit{Decapoda})}
+			]
+		},
+	
+		% Decapoda
+		Decapoda -> {
+			Dendrobranchiata[
+			as={Prawns\\(\tit{Dendrobranchiata})}
+			],
+			Pleocyemata
+		},
+	
+		% Pleocyemata
+		Pleocyemata -> {
+			Reptantia,
+			Stenopodidea[
+			as={Boxer Shrimp\\(\tit{Stenopodidea})}
+			],
+			Procarididea,
+			Caridea[
+			as={True Shrimp\\(\tit{Caridae})}
+			]
+		},
+	
+		% Reptantia
+		Reptantia -> {
+			Achelata,
+			Polychelida[
+			as={Deep Sea Lobsters\\(\tit{Polychelida})}
+			],
+			Glypheidea,
+			Astacidea, 
+			Axiidea[
+			as={Ghost Shrimp\\(\tit{Axiidea})}
+			],
+			Gebiidea[
+			as={Mud Lobsters and\\ Mud Shrimp\\(\tit{Gebiidea})}
+			],
+			Anomura[
+			as={Hermit Crabs\\ and Friends\\(\tit{Anomura})}
+			],
+			Brachyura[
+			as={True Crabs\\(\tit{Brachyura})}
+			],
+		},
+	
+		% Achelata
+		Achelata -> {
+			Palinuridae[
+			as={Spiny Lobsters\\(Langoustes / Rock Lobsters)\\ and Furry Lobsters\\(\tit{Palinuridae})}
+			],
+			Scyllaridae[
+			as={Slipper Lobsters\\(\tit{Scyllaridae})}
+			]
+		},
+	
+		% Astacidea
+		Astacidea -> {
+			Crayfish[
+			as={Crayfish\\(\tit{Astacoidea, Parastacoidea})}
+			],
+			Nephropoidea[
+			as={True Lobsters\\(\tit{Nephropoidea})}
+			],
+			Enoplometopoidea[
+			as={Reef Lobsters\\(\tit{Enoplometopoidea})}
+			]
+		},
+	
+		% Anomura
+		Anomura -> {
+			Galatheoidea[
+			as={Squat Lobsters and\\Porcelain Crabs\\(\tit{Galatheoidea})}
+			],
+			Paguridae,
+			Lithodidae[
+			as={King Crabs\\(\tit{Lithodidae})}
+			],
+			Pylochelidae,
+			Paguroidea[
+			as={True Hermit Crabs\\(\tit{Paguroidea})}
+			],
+			Lomisidae[
+			as={Hairy Stone Crabs\\(\tit{Lomisidae})}
+			],
+			Aeglidae[
+			as={Pancoras\\(\tit{Aeglidae})}
+			],
+			Chirostyloidea[
+			as={Yeti Crabs and Friends\\(\tit{Chirostyloidea})}
+			],
+			Hippoidea[
+			as={Mole Crabs\\(\tit{Hippoidea})}
+			],
+			Paguroidea[
+			as={True Hermit Crabs\\(\tit{Paguroidea})}
+			]
+		},
+	
+		% Thecostraca
+		Thecostraca -> {
+			Facetotecta,
+			Ascothoracida,
+			Cirripedia[
+			as={Barnacles\\(\tit{Cirripedia})}
+			]
+		},
+	
+		% Allotriocarida
+		Allotriocarida -> {	
+			Branchiopoda,
+			Cephalocarida[
+			as={Horseshoe Shrimp\\(\tit{Cephalocarida})}
+			],
+			Hexapoda
+		},
+	
+		% Branchiopoda
+		Branchiopoda -> {
+			 Sarsostraca[
+			 as={Fairy Shrimp\\(\tit{Sarsostraca})}
+			 ],
+			 Phyllopoda[
+			 as={Clam Shrimp and\\ Water Fleas\\(\tit{Phyllopoda})}
+			 ],
+		},
+	
+		% Hexapoda
+		Hexapoda -> {
+			Collembola[
+			as={Springtails\\(\tit{Collembola})}
+			],
+			Protura[
+			as={Coneheads\\(\tit{Protura})}
+			],
+			Diplura[
+			as={Two-Pronged Bristletails\\(\tit{Diplura})}
+			],
+			Insecta[
+			as={Insects\\(\tit{Insecta})}
+			]
+		},
+	
+		% Insecta
+		Insecta -> {
+			Archaeognatha[
+			as={Jumping Bristletails\\(\tit{Archaeognatha})}
+			],
+			Dicondylia
+		},
+	
+		% Dicondylia
+		Dicondylia -> {
+			Zygentoma[
+			as={Silverfish\\(\tit{Zygentoma})}
+			],
+			Pterygota[
+			as={Winged Insects\\(\tit{Pterygota})}
+			]
+		},
+	
+		%Pterygota
+		Pterygota -> {
+			Ephemeroptera[
+			as={Mayflies\\(\tit{Ephemeroptera})}
+			],
+			Metapterygota
+		},
+	
+		% Metapterygota
+		Metapterygota -> {
+			Odonatoptera [
+			as={Dragonflies and\\ Damselflies\\(\tit{Odonatoptera})}
+			],
+			Neoptera [
+			as={Insects with\\ foldable wings\\(\tit{Neoptera})}
+			]
+		},
+	
+		% Neoptera
+		Neoptera -> {
+			Polyneoptera,
+			Eumetabola
+		},
+	
+		% Eumetabola
+		Eumetabola -> {
+			Paraneoptera,
+			Holometabola[
+			as={Insects that Undergo\\Complete Metamorphosis\\(\tit{Holometabola})}
+			]
+		},
+	
+		% Holometabola
+		Holometabola -> {
+			Hymenoptera[
+			as={Wasps, Bees,\\ Ants and Sawflies\\(\tit{Hymenoptera})}
+			],
+			Aparaglossata
+		},
+	
+		% Aparaglossata
+		Aparaglossata -> {
+			Neuropteroidea,
+			Panorpida
+		},
+	
+		% Panorpida
+		Panorpida -> {
+			Amphiesmenoptera,
+			Antliophora
+		},
+	
+		% Amphiesmenoptera
+		Amphiesmenoptera -> {
+			Trichoptera[
+			as={Caddisflies\\(\tit{Trichoptera})}
+			],
+			Lepidoptera[
+			as={Moths,\\ including Butterflies\\(\tit{Lepidoptera})}
+			]
+		},
+	
+		% Antliophora
+		Antliophora -> {
+			Diptera[
+			as={True Flies\\(\tit{Diptera})}
+			],
+			Mecoptera[
+			as={Scorpionflies\\(\tit{Mecoptera})}
+			],
+			Siphonaptera[
+			as={Fleas\\(\tit{Siphonaptera})}
+			]
+		},
+	
+		% Neuropteroidea
+		Neuropteroidea -> {
+			Neuropterida,
+			Coleopterida
+		},
+	
+		% Coleopterida
+		Coleopterida -> {
+			Coleoptera[
+			as={Beetles\\(\tit{Coleoptera})}
+			],
+			Strepsiptera[
+			as={Twisted-Wing Parasites\\(\tit{Strepsiptera})}
+			]
+		},
+	
+		% Neuropterida
+		Neuropterida -> {
+			Raphidioptera[
+			as={Snakeflies\\(\tit{Raphidioptera})}
+			],
+			Megaloptera,
+			Neuroptera[
+			as={Lacewings, Dustywings,\\Spongillaflies, Mantidflies,\\Spoonwings, Owlflies\\and Antlions\\(\tit{Neuroptera})}
+			]
+		},
+	
+		% Megaloptera
+		Megaloptera -> {
+			Sialidae[
+			as={Alderflies\\(\tit{Sialidae})}
+			],
+			Corydalidae
+		},
+	
+		% Corydalidae
+		Corydalidae -> {
+			Chauliodinae[
+			as={Fishflies\\(\tit{Chauliodinae})}
+			],
+			Corydalinae[
+			as={Dobsonflies\\(\tit{Corydalinae})}
+			]
+		},
+	
+		% Paraneoptera
+		Paraneoptera -> {
+			Condylognatha,
+			Psocodea[
+			as={Lice\\(\tit{Psocodea})}
+			]
+		},
+	
+		% Condylognatha
+		Condylognatha -> {
+			Thysanoptera[
+			as={Thrips\\(\tit{Thysanoptera})}
+			],
+			Hemiptera[
+			as={True Bugs\\(\tit{Hemiptera})}
+			]
+		},
+	
+		% Hemiptera
+		Hemiptera -> {
+			Heteroptera[
+			as={Typical Bugs\\(\tit{Heteroptera})}
+			],
+			Coleorrhyncha[
+			as={Moss Bugs\\(\tit{Coleorrhyncha})}
+			],
+			Auchenorrhyncha
+		},
+	
+		% Auchenorrhyncha
+		Auchenorrhyncha -> {
+			Fulgoromorpha[
+			as={Planthoppers\\(\tit{Fulgoromorpha})}
+			],
+			Cicadomorpha
+		},
+	
+		% Cicadomorpha
+		Cicadomorpha -> {
+			Cercopoidea[
+			as={Froghoppers and\\Spittlebugs\\(\tit{Cercopoidea})}
+			],
+			Cicadoidea[
+			as={Cicadas\\(\tit{Cicadoidea})}
+			],
+			Membracoidea[
+			as={Leafhoppers and\\Treehoppers\\(\tit{Membracoidea})}
+			]
+		},
+	
+		% Polyneoptera
+		Polyneoptera -> {
+			Zoraptera[
+			as={Angel Insects\\(\tit{Zoraptera})}
+			],
+			Dermaptera[
+			as={Earwigs\\(\tit{Dermaptera})}
+			],
+			Plecoptera[
+			as={Stoneflies\\(\tit{Plecoptera})}
+			],
+			Orthoptera,
+			Grylloblattodea[
+			as={Ice Crawlers\\(\tit{Grylloblattodea})}
+			],
+			Mantophasmatidae[
+			as={Gladiators\\(\tit{Mantophasmatidae})}
+			],
+			Phasmatodea[
+			as={Stick Insects\\(\tit{Phasmatodea})}
+			],
+			Embioptera[
+			as={Webspinners\\(\tit{Embioptera})}
+			],
+			Dictyoptera
+		},
+	
+		% Dictyoptera
+		Dictyoptera -> {
+			Mantodea[
+			as={Mantises\\(\tit{Mantodea})}
+			],
+			Blattodea[
+			as={Termites and Cockroaches\\(\tit{Blattodea})}
+			]	
+		},
+	
+		% Orthoptera
+		Orthoptera -> {
+			Ensifera[
+			as={Crickets\\(\tit{Ensifera})}
+			],
+			Caelifera
+		},
+	
+		% Caelifera
+		Caelifera -> {
+			Tridactylidea[
+			as={Pygmy Mole Crickets\\(\tit{Tridactylidea})}
+			],
+			Acrididea[
+			as={Grasshoppers and Friends\\(\tit{Acrididea})}
+			]
+		},
+	
+		% Oligostraca
+		Oligostraca -> {
+			Mystacocarida,
+			Ostracoda[
+			as={Seed Shrimp\\(\tit{Ostracoda})}
+			],
+			Ichthyostraca
+		},
+	
+		% Ichthyostraca
+		Ichthyostraca -> {
+			Branchiura[
+			as={Fish Lice\\(\tit{Branchiura})}
+			],
+			Pentastomida[
+			as={Tongue Worms\\(\tit{Pentastomida})}
+			],
+		},
+	
+		% Chelicerata
+		Chelicerata -> {
+			Pycnogonida[
+			as={Sea Spiders\\(\tit{Pycnogonida})}
+			],
+			Prosomapoda
+		};
+	
+		% Prosomapoda
+		Prosomapoda -> {
+			Xiphosura[
+			as={Horseshoe Crabs\\(\tit{Xiphosura})}
+			],
+			Arachnida[
+			as={Arachnids \\(\tit{Arachnida})}
+			],
+		};
+	
+		% Arachnida
+		Arachnida -> {
+			Opiliones[
+			as={Harvestmen \\(\tit{Opiliones})}
+			],
+			Mites[
+			as={Mites \\(\tit{Acariformes,}\\\tit{Parasitiformes})}
+			],
+			Ricinulei[
+			as={Hooded Tick-Spiders\\(\tit{Ricinulei})}
+			],
+			Solifugae[
+			as={Solifuges\\(\tit{Solifugae})}
+			],
+			Scorpiones[
+			as={Scorpions\\(\tit{Scorpiones})}
+			],
+			Pseudoscorpiones[
+			as={Pseudoscorpions\\(\tit{Pseudoscorpiones})}
+			],	
+			Tetrapulmonata
+		};
+	
+		% Tetrapulmonata
+		Tetrapulmonata -> {
+			 Araneae[
+			 as={True Spiders\\(\tit{Aranea})}
+			 ],
+			 Amblypygi[
+			 as={Whip-Spiders\\(\tit{Amblypygi})}
+			 ],
+			 Uropygi[
+			 as={Vinegaroons\\(\tit{Uropygi})}
+			 ],
+			 Schizomida[
+			 as={Sprickets\\(\tit{Schizomida})}
+			 ],
+		};
+	
+		
 		% Spiralia
 		Spiralia -> {
 			Chaetognatha[
@@ -798,13 +1338,15 @@
 		
 		% Porifera
 		Porifera -> {
-			Calcarea, 
+			Calcarea[
+				as={Calcareous Sponges\\ (\tit{Calcarea})}
+				],
 			Demospongiae[
-			as={Common Sponges\\ (\tit{Demospongiae})
-			}],
+				as={Common Sponges\\ (\tit{Demospongiae})}
+				],
 			Hexactinellida[
-			as={Glass Sponges\\ (\tit{Hexactinellida})
-			}],
+				as={Glass Sponges\\ 	(\tit{Hexactinellida})}
+				],
 			Homoscleromorpha
 		},
 
