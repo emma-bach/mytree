@@ -178,6 +178,99 @@
 				],
 		},
 	
+		% Sauropsida
+		Sauropsida -> {
+			Lepidosauria,
+			Archelosauria
+		},
+	
+		% Archelosauria
+		Archelosauria -> {
+			Testudines[
+			as={Turtles\\(\tit{Testudines})}
+			],
+			Archosauria
+		},
+	
+		% Lepidosauria
+		Lepidosauria -> {
+			Rhynchocephalia[
+				as={Tuatara\\(\tit{Rhynchocephalia})}
+				],
+			Squamata[
+				as={Lizards and Snakes\\(\tit{Squamata})}
+				]
+		},
+	
+		% Squamata
+		Squamata -> {
+			Dibamia[
+				as={Blind Skinks\\(\tit{Dibamia})}
+				],
+			Gekkota[
+				as={Gekkota\\(\tit{Geckos})}
+				],
+			Scincomorpha,
+			Lacertoidea,
+			Toxicofera
+		},
+	
+		% Toxicofera
+		Toxicofera -> {
+			Serpentes[
+				as={Snakes\\(\tit{Serpentes})}],
+			Iguania[
+				as={Iguanas, Chameleons,\\ Agamids and Friends\\(\tit{Iguania})}
+				],
+			Anguimorpha,
+		},
+	
+		% Anguimorpha
+		Anguimorpha -> {
+			Varanidae,
+			Lanthanotidae,
+			Anguidae,
+			Helodermatidae,
+			Shinisauridae,
+			Xenosauridae[
+				as={Knob-Scaled Lizards\\(\tit{Xenosauridae})}]
+		},
+	
+		% Lacertoidea
+		Lacertoidea -> {
+			Lacertidae[
+				as={Wall Lizards\\(\tit{Lacertidae})}],
+			Teiidae[
+				as={Whiptails and Tegus}\\(\tit{Teiidae})
+				],
+			Gymnophthalmidae[
+				as={Spectacled Lizards\\(\tit{Gymnophthalmidae})}
+				],
+			Amphisbaenia[
+				as={Worm Lizards\\(\tit{Amphisbaenia})}
+				]
+		},
+	
+		% Scincomorpha
+		Scincomorpha -> {
+			Scincidae[
+				as={Skinks\\(\tit{Scincidae})}
+				],
+				Xantusiidae[
+				as={Night Lizards\\(\tit{Xantusiidae})}
+				],
+				Cordyliformes
+		},
+	
+		% Cordyliformes
+		Cordyliformes -> {
+			Cordylidae[
+			as={Girdled Lizards\\(\tit{Cordylidae})}],
+			Gerrhosauridae[
+			as={Plated Lizards\\(\tit{Gerrhosauridae})}
+			]
+		},
+	
 		% Synapsida
 		Synapsida -> {
 			Mammalia[
