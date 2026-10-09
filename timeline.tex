@@ -2,109 +2,221 @@
 
 \usepackage{multirow}
 
+\newcommand{\tit}{\textit}
+\newcommand{\tabitem}[2]{\textbf{\textemdash~}$\mathbf{#1}$~\textbf{#2:}}
+\renewcommand{\baselinestretch}{1.2}
 \begin{document}
-	\begin{tabular}{|c|c|c|c|p{5cm}|c|}
+	\begin{tabular}{|c|c|c|c|p{5cm}|p{10cm}|c|}
 		\hline
-		Eon & Era & Period & Epoch & Age & Beginning\\
+		Eon & Era & Period & Epoch & Outline & Events & Beginning\\
 		\hline
 		
-		Hadean & \multicolumn{4}{|c|}{} & 4.57 Ga\\
+		\multicolumn{4}{|c|}{Hadean} 
+		&
+		Formation of the Earth and Moon. Likely emergence of the last universal common ancestor (LUCA). Atmospheric oxygen exists only in trace amounts.
+		& 
+		\tabitem{4.576 \pm 0.16}{Ga} Formation of Earth. \newline
+		\tabitem{4.4}{Ga} Theia, a Mars-sized planetary body, impacts Earth, leading to the formation of the moon. \newline
+		\tabitem{4.3}{Ga} Last potentially planet-sterilizing extraterrestrial impact. \newline
+		\tabitem{4.04}{Ga} Formation of the oldest minerals currently dated on Earth, in the form of zircon crystals. \newline
+		\tabitem{4.01}{Ga} Oldest potentially biogenic carbon, found preserved in zircon.
+		& 4.57 Ga\\
 		\hline
-		\multirow{4}{*}{Archean} & Eoarchean & \multicolumn{3}{c|}{} & 4.03 Ga\\
-		\cline{2-6}
-		& Paleoarchean & \multicolumn{3}{c|}{} & 3.6 Ga\\
-		\cline{2-6}
-		& Mesoarchean & \multicolumn{3}{c|}{} & 3.2 Ga\\
-		\cline{2-6}
-		& Neoarchean & \multicolumn{3}{c|}{} & 2.8 Ga\\
+		\multirow{4}{*}{Archean} & \multicolumn{3}{c|}{Eoarchean} 
+		&
+		Increasing formation of continental crust. Appearance of anoxygenic photosynthesis.
+		&
+		\tabitem{4.031}{Ga} Formation of the oldest known intact rock formations on Earth.\newline
+		\tabitem{3.7 \pm 0.1}{Ga} Banded iron formations (BIFs) suggest presence of anoxygenic photosynthesizers.
+		& 4.03 Ga\\
+		\cline{2-7}
+		& \multicolumn{3}{c|}{Paleoarchean} 
+		& 
+		Microbial mats become common.
+		&
+		\tabitem{3.48}{Ga} Microbially induced sedimentary structures (MISS) give strong evidence for the presence of microbial mats.\newline
+		\tabitem{3.33}{Ga} Presence of directly preserved microbial mats.
+		& 3.6 Ga\\
+		\cline{2-7}
+		& \multicolumn{3}{c|}{Mesoarchean} 
+		& 
+		&
+		\tabitem{3.2}{Ga} Microbial life settles in rivers. \newline
+		\tabitem{\approx 3}{Ga} Possible onset of plate tectonics. \newline
+		\tabitem{2.9}{Ga} Oldest evidence of glaciation. \newline
+		\tabitem{2.8 \pm 0.4}{Ga} Emergence of cyanobacteria, the first oxygenetic photosynthesisers. 
+		& 3.2 Ga\\
+		\cline{2-7}
+		& \multicolumn{3}{c|}{Neoarchean} 
+		& 
+		Major diversification of cyanobacteria, including multicellularity. Proliferation of oxygen-producing life gradually increases the amount of atmospheric oxygen.
+		& 
+		& 2.8 Ga\\
 		\hline
-		\multirow{10}{*}{Proterozoic} & \multirow{4}{*}{Paleoproterozoic} & Siderian & \multicolumn{2}{c|}{} & 2.5 Ga\\
-		\cline{3-6}
-		&& Rhyacian & \multicolumn{2}{c|}{} & 2.3 Ga\\
-		\cline{3-6}
-		&& Orosirian & \multicolumn{2}{c|}{} & 2.05 Ga\\
-		\cline{3-6}
-		&& Statherian & \multicolumn{2}{c|}{} & 1.8 Ga\\
-		\cline{2-6}
-		& \multirow{4}{*}{Mesoproterozoic} & Calymmian & \multicolumn{2}{c|}{} & 1.6 Ga\\
-		\cline{3-6}
-		&& Ecstasian & \multicolumn{2}{c|}{} & 1.4 Ga\\
-		\cline{3-6}
-		&& Stenian & \multicolumn{2}{c|}{} & 1.2 Ga \\
-		\cline{2-6}
-		& \multirow{4}{*}{Neoproterozoic} & Tonian & \multicolumn{2}{c|}{} & 1 Ga\\
-		\cline{3-6}
-		&& Cryogenian & \multicolumn{2}{c|}{} & 720 Ma\\
-		\cline{3-6}
-		&& Ediacaran & \multicolumn{2}{c|}{} & 635 Ma\\
-		\cline{1-6}
-		\multirow{34}{*}{Phanerozoic} & \multirow{19}{*}{Paleozoic} & \multirow{4}{*}{Cambrian} & Terreneuvian & & 539 Ma\\
-		\cline{4-6} 
-		&&& Series 2 & & 521 Ma\\
-		\cline{4-6} 
-		&&& Miaolingian & & 507 Ma\\
-		\cline{4-6} 
-		&&& Firongian & & 497 Ma\\
-		\cline{3-6} 
-		&& \multirow{3}{*}{Ordovician} & Lower & & 487 Ma\\
-		\cline{4-6} 
-		&&& Middle & & 471 Ma\\
-		\cline{4-6} 
-		&&& Upper  & & 458 Ma\\
-		\cline{3-6} 
-		&& \multirow{4}{*}{Silurian} & Llandovery & & 443 Ma\\
-		\cline{4-6} 
-		&&& Wenlock & & 433 Ma\\
-		\cline{4-6} 
-		&&& Ludlow & & 427 Ma\\
-		\cline{4-6} 
-		&&& Pridoli & & 423 Ma\\
-		\cline{3-6} 
-		&& \multirow{3}{*}{Devonian} & Lower & & 420 Ma\\
-		\cline{4-6} 
-		&&& Middle & & 393 Ma\\
-		\cline{4-6} 
-		&&& Upper & & 382 Ma\\
-		\cline{3-6} 
-		&& \multirow{2}{*}{Carboniferous} & Mississippian & & 359 Ma\\
-		\cline{4-6} 
-		&&& Pennsylvanian & & 323 Ma\\
-		\cline{3-6} 
-		&& \multirow{3}{*}{Permian} & Cisuralian & & 299 Ma\\
-		\cline{4-6} 
-		&&& Guadalupian & & 274 Ma\\
-		\cline{4-6} 
-		&&& Lopingian & & 260 Ma\\
-		\cline{2-6} 
-		& \multirow{8}{*}{Mesozoic} & \multirow{3}{*}{Triassic} & Lower & & 252 Ma\\
-		\cline{4-6} 
-		&&& Middle & & 247 Ma\\
-		\cline{4-6} 
-		&&& Upper & & 237 Ma\\
-		\cline{3-6} 
-		&& \multirow{3}{*}{Jurassic} & Lower & & 201 Ma\\
-		\cline{4-6} 
-		&&& Middle & & 174 Ma\\
-		\cline{4-6} 
-		&&& Upper & & 161 Ma\\
-		\cline{3-6} 
-		&& \multirow{2}{*}{Cretaceous} & Lower & & 143 Ma\\
-		\cline{4-6} 
-		&&& Upper & & 101 Ma\\
-		\cline{2-6} 
-		& \multirow{7}{*}{Cenozoic} & \multirow{3}{*}{Paleogene} & Paleocene & & 66 Ma\\
-		\cline{4-6} 
-		&&& Eocene & & 56 Ma\\
-		\cline{4-6} 
-		&&& Oligocene & & 33.9 Ma\\
-		\cline{3-6} 
-		&& \multirow{2}{*}{Neogene} & Miocene & & 23 Ma\\
-		\cline{4-6} 
-		&&& Pliocene & & 5.33 Ma\\
-		\cline{3-6} 
-		&& \multirow{2}{*}{Quaternary} & Pleistocene & & 2.58 Ma\\
-		\cline{4-6} 
-		&&& Holocene & & 11.7 ka\\
+		\multirow{10}{*}{Proterozoic} & \multirow{4}{*}{Paleoproterozoic} & \multicolumn{2}{c|}{Siderian} 
+		& 
+		The great oxidation event causes the extinction of many early anaerobic organisms. A day is $16.9 \pm 0.2$ hours long.
+		& 
+		\tabitem{2.44}{Ga} Great Oxidation Event.
+		& 2.5 Ga\\
+		\cline{3-7}
+		&& \multicolumn{2}{c|}{Rhyacian} 
+		& 
+		Increase of atmospheric oxygen leads to a major expansion of life, enabled by the efficiency of aerobic metabolisms.
+		& 
+		& 2.3 Ga\\
+		\cline{3-7}
+		&& \multicolumn{2}{c|}{Orosirian} 
+		& 
+		& 
+		\tabitem{2.0 \pm 0.3}{Ga} Eukaryogenesis! A possible early candidate is \tit{Grypania}, a tube-shaped organism with a size over one centimeter. \newline
+		\tabitem{1.9 \pm 0.1}{Ga} Formation of the Columbian supercontinent.
+		& 2.05 Ga\\
+		\cline{3-7}
+		&& \multicolumn{2}{c|}{Statherian} & & & 1.8 Ga\\
+		\cline{2-7}
+		& \multirow{4}{*}{Mesoproterozoic} & \multicolumn{2}{c|}{Calymmian} 
+		&
+		& 
+		\tabitem{1.6}{Ga} Presumed appearance of eukaryotic red algae!
+		& 
+		1.6 Ga\\
+		\cline{3-7}
+		&& \multicolumn{2}{c|}{Ecstasian} 
+		& 
+		& 
+		\tabitem{1.4 \pm 0.1}{Ga} Fragmentation of the Columbian supercontinent.
+		& 1.4 Ga\\
+		\cline{3-7}
+		&& \multicolumn{2}{c|}{Stenian} 
+		& 
+		& 
+		\tabitem{1.2}{Ga} Collision between the continents of Laurentia and Amazonia marks the first step in the assembly of the Rodinian supercontinent.
+		& 1.2 Ga \\
+		\cline{2-7}
+		& \multirow{4}{*}{Neoproterozoic} & \multicolumn{2}{c|}{Tonian} 
+		& 
+		& 
+		\tabitem{725 \pm 75}{Ma} East African orogeny marks the beginning of the formation of Gondwana.
+		& 1 Ga\\
+		\cline{3-7}
+		&& \multicolumn{2}{c|}{Cryogenian} 
+		& 
+		Fragmentation of the Rodinian supercontinent. Two likely Snowball Earth glaciations.
+		& 
+		\tabitem{720-658}{Ma} Sturtian glaciation.\newline
+		\tabitem{655-635}{Ma} Marinoan glaciation.
+		& 720 Ma\\
+		\cline{3-7}
+		&& \multicolumn{2}{c|}{Ediacaran} 
+		& 
+		Gondwana assembles. Rapid rise in eukaryote diversity, likely including the first animals.
+		& 
+		\tabitem{579.88 \pm 0.44 - 579.63 \pm 0.15}{Ma} Gaskiers glaciation.
+		& 635 Ma\\
+		\cline{1-7}
+		\multirow{34}{*}{Phanerozoic} & \multirow{19}{*}{Paleozoic} & \multirow{4}{*}{Cambrian} & Terreneuvian 
+		& 
+		First recognizable members of modern animal phyla appear, including arthropods, molluscs, annelids, echinoderms, bryozoans, priapulids, brachiopods, hemichordates, and chordates.
+		& 
+		& 539 Ma\\
+		\cline{4-7} 
+		&&& Series 2 & & & 521 Ma\\
+		\cline{4-7} 
+		&&& Miaolingian & & & 507 Ma\\
+		\cline{4-7} 
+		&&& Firongian & & & 497 Ma\\
+		\cline{3-7} 
+		&& \multirow{3}{*}{Ordovician} & Lower 
+		& 
+		Earliest Fish appear. Early land plants spread.
+		& 
+		& 487 Ma\\
+		\cline{4-7} 
+		&&& Middle & & & 471 Ma\\
+		\cline{4-7} 
+		&
+		&
+		& 
+		Upper  
+		& 
+		Late Ordovician mass extinction leads to the loss of $\approx 85\%$ of marine invertebrate species.
+		& 
+		& 
+		458 Ma\\
+		\cline{3-7} 
+		&& \multirow{4}{*}{Silurian} & Llandovery 
+		& 
+		Major radiation of graptolites, bivalves, gastropods, nautiloids, brachiopods, and crinoids. Earliest jawed fish appear. Earliest vascular plants appear. Earliest land animals appear. Earliest freshwater fish appear.
+		& 
+		& 
+		443 Ma\\
+		\cline{4-7} 
+		&&& Wenlock & & & 433 Ma\\
+		\cline{4-7} 
+		&&& Ludlow & & & 427 Ma\\
+		\cline{4-7} 
+		&&& Pridoli & & & 423 Ma\\
+		\cline{3-7} 
+		&& \multirow{3}{*}{Devonian} & Lower 
+		& 
+		Vascular plants increase in size and develop large root systems. Jawed fish differentiate into ray-finned, lobe-finned, and cartilaginous fish. Tetrapods appear. Early amphibians move to land. Ammonoids appear.
+		& 
+		& 
+		420 Ma\\
+		\cline{4-7} 
+		&&& Middle & & & 393 Ma\\
+		\cline{4-7} 
+		&&& Upper 
+		& 
+		& 
+		\tabitem{372}{Ma} Late Devonian/Kellwasser extinction - loss of $\approx$$40\%$ of marine species.\newline
+		\tabitem{359}{Ma} End-Devonian/Hangenberg extinction.
+		& 382 Ma\\
+		\cline{3-7} 
+		&& \multirow{2}{*}{Carboniferous} & Mississippian 
+		& 
+		& 
+		\tabitem{335}{Ma} Gondwana, Euramerica and Sibera come together, forming Pangaea.
+		& 359 Ma\\
+		\cline{4-7} 
+		&&& Pennsylvanian & & & 323 Ma\\
+		\cline{3-7} 
+		&& \multirow{3}{*}{Permian} & Cisuralian & & & 299 Ma\\
+		\cline{4-7} 
+		&&& Guadalupian & & & 274 Ma\\
+		\cline{4-7} 
+		&&& Lopingian & & & 260 Ma\\
+		\cline{2-7} 
+		& \multirow{8}{*}{Mesozoic} & \multirow{3}{*}{Triassic} & Lower & & & 252 Ma\\
+		\cline{4-7} 
+		&&& Middle & & & 247 Ma\\
+		\cline{4-7} 
+		&&& Upper & & & 237 Ma\\
+		\cline{3-7} 
+		&& \multirow{3}{*}{Jurassic} & Lower & & & 201 Ma\\
+		\cline{4-7} 
+		&&& Middle & & & 174 Ma\\
+		\cline{4-7} 
+		&&& Upper & & & 161 Ma\\
+		\cline{3-7} 
+		&& \multirow{2}{*}{Cretaceous} & Lower & & & 143 Ma\\
+		\cline{4-7} 
+		&&& Upper & & & 101 Ma\\
+		\cline{2-7} 
+		& \multirow{7}{*}{Cenozoic} & \multirow{3}{*}{Paleogene} & Paleocene & & & 66 Ma\\
+		\cline{4-7} 
+		&&& Eocene & & & 56 Ma\\
+		\cline{4-7} 
+		&&& Oligocene & & & 33.9 Ma\\
+		\cline{3-7} 
+		&& \multirow{2}{*}{Neogene} & Miocene & & & 23 Ma\\
+		\cline{4-7} 
+		&&& Pliocene & & & 5.33 Ma\\
+		\cline{3-7} 
+		&& \multirow{2}{*}{Quaternary} & Pleistocene & & & 2.58 Ma\\
+		\cline{4-7} 
+		&&& Holocene & & & 11.7 ka\\
 		\hline
 	\end{tabular}
 \end{document}
